@@ -1,0 +1,20 @@
+FROM python:3.11.5-bookworm
+
+# pip dependencies
+ENV PIP_DEPS \
+	pandas \
+	click
+
+# run apt update
+RUN apt update && \
+    apt upgrade
+
+# install pip dependencies
+RUN pip install ${PIP_DEPS}
+
+# copy scripts to image
+COPY ./scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
+
+# set default entrypoint and command
+ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
+CMD ["/bin/bash"]
