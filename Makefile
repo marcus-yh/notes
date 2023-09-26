@@ -15,7 +15,7 @@ build-python:
 
 .PHONY: build
 build: build-mkdocs build-python
-
+	docker-compose build python
 
 .PHONY: build-doc
 build-doc:

@@ -18,3 +18,4 @@ COPY ./scripts/entrypoint.sh /usr/local/bin/entrypoint.sh
 # set default entrypoint and command
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
 CMD ["/bin/bash"]
+
