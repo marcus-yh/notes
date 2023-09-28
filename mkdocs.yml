@@ -1,5 +1,5 @@
 site_name: ifs2023
-#site_url: TBD
+site_url: https://github.com/marcus-yh/notes
 theme:
   name: material
   features:
