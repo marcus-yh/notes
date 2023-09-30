@@ -1,3 +1,4 @@
+#!/usr/bin/make
 
 SHELL := /bin/sh
 
@@ -19,8 +20,12 @@ build: build-mkdocs build-python
 
 .PHONY: build-doc
 build-doc:
-	echo "hej"
+	docker run --rm -v ${PWD}:/docs marcus-yh/notes build
+
+.PHONY: deploy-github-pages
+deploy-github-pages:
+	docker run --rm -v ${PWD}:/docs marcus-yh/notes gh-deploy --force
 
 .PHONY: serve-doc
-serve-doc:
+serve-local:
 	docker-compose up

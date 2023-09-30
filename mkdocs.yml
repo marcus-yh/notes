@@ -1,5 +1,5 @@
 site_name: ifs2023
-site_url: https://github.com/marcus-yh/notes
+site_url: https://github.com/marcus-yh/notes/
 theme:
   name: material
   features:
@@ -53,4 +53,4 @@ markdown_extensions:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/marcus-yh"  target="_blank" rel="noopener">Marcus Brännvall</a>
+  &copy; 2023 <a href="https://github.com/marcus-yh"  target="_blank" rel="noopener">Marcus</a>

@@ -21,6 +21,7 @@ jobs:
           path: .cache
           restore-keys: |
             mkdocs-material-
-      - run: pip install mkdocs-material mkdocs-material-extensions "mkdocs-material[imaging]" --upgrade
-      - run: docker run --rm -it ${PWD}:/docs squidfunk-mkdocs-material build
-      - run: mkdocs gh-deploy --force
+      #- run: pip install mkdocs-material mkdocs-material-extensions "mkdocs-material[imaging]" --upgrade
+      - run: make build
+      - run: make build-doc
+      - run: make deploy-github-pages
